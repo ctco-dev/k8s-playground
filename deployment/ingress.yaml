@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: app
+spec:
+  rules:
+  - host: front-foo.bar
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: front-service
+          servicePort: 8080
+  - host: bff-foo.bar
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: bff-service
+          servicePort: 8081

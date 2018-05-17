@@ -1,0 +1,15 @@
+node_modules
+build
+npm-debug.log
+.idea
+.git
+.DS_Store
+.env.template
+.editorconfig
+Dockerfile
+docker-compose.yml
+.dockerignore
+.gitignore
+reports
+*.sh
+

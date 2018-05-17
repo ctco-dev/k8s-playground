@@ -1,0 +1,18 @@
+{
+  "name": "bff",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "pm2-docker pm2-config.json"
+  },
+  "dependencies": {
+    "cors": "2.8.4",
+    "express": "4.16.3",
+    "pm2": "2.6.1",
+    "request": "2.85.0",
+    "request-promise": "4.2.2"
+  },
+  "devDependencies": {
+    "@types/express": "4.11.1",
+    "@types/node": "9.6.6"
+  }
+}

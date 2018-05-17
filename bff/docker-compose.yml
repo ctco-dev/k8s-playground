@@ -1,0 +1,9 @@
+version: "2"
+services:
+  bff:
+    build: .
+    image: sabbox/bff
+    ports:
+      - 8081:8081
+    environment:
+      - JOKE_GENERATOR
