@@ -1,0 +1,11 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: app-config
+  namespace: default
+data:
+  jokeGeneratorService: http://joke-generator-service:8082/joke
+  chuckNorrisServiceUrl: https://api.chucknorris.io/jokes/random
+  noProxy: 127.0.0.1,localhost,ctco.lv,*.ctco.lv,10.0.0.0/8
+  httpsProxy: http://proxy.ctco.lv:8080/
+  httpProxy: http://proxy.ctco.lv:8080/

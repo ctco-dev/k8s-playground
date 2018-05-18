@@ -32,4 +32,7 @@ spec:
         - containerPort: 8081
         env:
         - name: JOKE_GENERATOR
-          value: 'http://joke-generator-service:8082/joke'
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: jokeGeneratorService

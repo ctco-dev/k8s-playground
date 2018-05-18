@@ -32,10 +32,22 @@ spec:
         - containerPort: 8082
         env:
         - name: JOKE_SERVICE_URL
-          value: 'https://api.chucknorris.io/jokes/random'
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: chuckNorrisServiceUrl
         - name: no_proxy
-          value: 127.0.0.1,localhost,ctco.lv,*.ctco.lv,10.0.0.0/8
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: noProxy
         - name: https_proxy
-          value: http://proxy.ctco.lv:8080/
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: httpsProxy
         - name: http_proxy
-          value: http://proxy.ctco.lv:8080/
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: httpProxy
