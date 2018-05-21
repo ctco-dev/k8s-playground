@@ -4,14 +4,14 @@ metadata:
   name: app
 spec:
   rules:
-  - host: front-foo.bar
+  - host: front.k8s.pncdev.net
     http:
       paths:
       - path: /
         backend:
           serviceName: front-service
           servicePort: 8080
-  - host: bff-foo.bar
+  - host: bff.k8s.pncdev.net
     http:
       paths:
       - path: /
