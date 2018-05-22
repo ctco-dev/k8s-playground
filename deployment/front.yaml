@@ -27,6 +27,6 @@ spec:
     spec:
       containers:
       - name: front
-        image: sabbox/front:5
+        image: sabbox/front:6
         ports:
         - containerPort: 8080
