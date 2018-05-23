@@ -16,7 +16,7 @@ metadata:
   labels:
     app: bff
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: bff
@@ -25,6 +25,18 @@ spec:
       labels:
         app: bff
     spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - bff
+              topologyKey: kubernetes.io/hostname
       containers:
       - name: bff
         image: sabbox/bff:7
