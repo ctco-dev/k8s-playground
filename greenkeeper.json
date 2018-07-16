@@ -1,0 +1,11 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "bff/package.json",
+        "front/package.json",
+        "joke-provider/package.json"
+      ]
+    }
+  }
+}
